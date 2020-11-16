@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import CheckBox from '../../checkbox/checkbox'
-import CryptButton from '../../crypt-button/crypt-button'
+import CheckBox from '../checkbox/checkbox'
+import CryptButton from '../crypt-button/crypt-button'
 import './decrypt-button-group.scss'
 
 const DecryptButtonGroup = ({ ...props }) => {
