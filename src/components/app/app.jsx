@@ -1,7 +1,7 @@
 import './app.scss'
 import { useState } from 'react'
 import TextArea from '../textarea/textarea'
-import DecryptButtonGroup from '../decrypt-button/decrypt-button-group'
+import DecryptButtonGroup from '../decrypt-button-group/decrypt-button-group'
 import TextResult from '../text-result/text-result'
 import Header from '../header/header'
 
