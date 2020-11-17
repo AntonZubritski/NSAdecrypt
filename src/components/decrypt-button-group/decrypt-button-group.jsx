@@ -1,17 +1,13 @@
-import React, { useState } from 'react'
-import CheckBox from '../checkbox/checkbox'
+import React from 'react'
 import CryptButton from '../crypt-button/crypt-button'
 import './decrypt-button-group.scss'
 
 const DecryptButtonGroup = ({ ...props }) => {
-  const { valueTextarea, setValueTextarea, setDecryptText } = props
-  const [checkbox, setCheckbox] = useState(false)
+  const { valueTextarea, setDecryptText } = props
 
   return (
     <div className="decrypt-button">
-      <CheckBox setCheckbox={setCheckbox} setValueTextarea={setValueTextarea} />
       <CryptButton
-        checkbox={checkbox}
         valueTextarea={valueTextarea}
         setDecryptText={setDecryptText}
       />
