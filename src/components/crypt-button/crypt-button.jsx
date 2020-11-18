@@ -5,13 +5,7 @@ const CryptButton = ({ ...props }) => {
   const { valueTextarea, setDecryptText } = props
 
   const edwardDecrypt = () => {
-    let text = ''
-    for (let i = 0; i < valueTextarea.length; i++) {
-      valueTextarea[i] !== valueTextarea[i + 1]
-        ? (text += valueTextarea[i])
-        : i++
-    }
-    setDecryptText(text)
+    setDecryptText(valueTextarea.replaceAll(/([a-z])\1/g, ''))
   }
 
   return (
