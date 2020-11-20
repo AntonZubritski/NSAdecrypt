@@ -4,8 +4,9 @@ import './crypt-button.scss'
 const CryptButton = ({ ...props }) => {
   const { valueTextarea, setDecryptText } = props
 
-  const edwardDecrypt = () => {
-    setDecryptText(valueTextarea.replaceAll(/([a-z])\1/g, ''))
+  const edwardDecrypt = (str) => {
+     const newStr = str.replaceAll(/([a-z])\1/g, '')
+     newStr === str ? setDecryptText(newStr) : edwardDecrypt(newStr, str)
   }
 
   return (
@@ -13,7 +14,7 @@ const CryptButton = ({ ...props }) => {
       type="button"
       className="btn"
       value="DECRYPT"
-      onClick={edwardDecrypt}
+      onClick={() => edwardDecrypt(valueTextarea)}
     />
   )
 }
