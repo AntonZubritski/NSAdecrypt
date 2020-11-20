@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/NSAdecrypt/static/css/main.00e11d50.chunk.css",
-    "main.js": "/NSAdecrypt/static/js/main.0b1b4f75.chunk.js",
-    "main.js.map": "/NSAdecrypt/static/js/main.0b1b4f75.chunk.js.map",
+    "main.js": "/NSAdecrypt/static/js/main.c666b81b.chunk.js",
+    "main.js.map": "/NSAdecrypt/static/js/main.c666b81b.chunk.js.map",
     "runtime-main.js": "/NSAdecrypt/static/js/runtime-main.ead69c0f.js",
     "runtime-main.js.map": "/NSAdecrypt/static/js/runtime-main.ead69c0f.js.map",
     "static/js/2.54be0a15.chunk.js": "/NSAdecrypt/static/js/2.54be0a15.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.ead69c0f.js",
     "static/js/2.54be0a15.chunk.js",
     "static/css/main.00e11d50.chunk.css",
-    "static/js/main.0b1b4f75.chunk.js"
+    "static/js/main.c666b81b.chunk.js"
   ]
 }
