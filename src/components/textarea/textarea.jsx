@@ -1,6 +1,6 @@
 import React from 'react'
 import './textarea.scss'
-const TextArea = ({ ...props }) => {
+const TextArea = props => {
   const { valueTextarea, setValueTextarea, setDecryptText } = props
 
   const onChangeTextarea = (e) => {
