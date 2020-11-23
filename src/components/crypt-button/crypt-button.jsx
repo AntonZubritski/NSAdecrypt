@@ -13,29 +13,30 @@ const CryptButton = (props) => {
     const replaceTextarea = valueTextarea.replaceAll(/[,.!?:;'"/ —-]/g, '')
     let text = ''
     let outputText = ''
+    const randomLet = () =>
+      Math.random()
+        .toString(36)
+        .replace(/[^a-z]+/g, '')
+        .substr(0, 1)
+        .repeat(2)
 
-    for (let q = 0; q < 2; q++) {
-      for (let i = 0; i < replaceTextarea.length; i++) {
-        let randomLet = Math.random()
-          .toString(36)
-          .replace(/[^a-z]+/g, '')
-          .substr(0, 1)
-          .repeat(2)
-
-        if (replaceTextarea[i] === replaceTextarea[i + 1]) {
-          text += replaceTextarea[i] + randomLet
-          i++
-        } else if (q === 1 && text[i] === text[i + 1]) {
-          outputText += text[i] + randomLet + text[i]
-          i++
-        } else if (q === 1 && text[i] !== text[i + 1]) {
-          outputText += text[i] + (Math.random() <= 0.6 ? randomLet : '')
-        } else {
-          text += replaceTextarea[i] + (Math.random() <= 0.6 ? randomLet : '')
-        }
+    for (let i = 0; i < replaceTextarea.length; i++) {
+      if (replaceTextarea[i] === replaceTextarea[i + 1]) {
+        text += replaceTextarea[i] + randomLet()
+        i++
+      } else {
+        text += replaceTextarea[i] + (Math.random() <= 0.6 ? randomLet() : '')
       }
     }
 
+    for (let i = 0; i < text.length; i++) {
+      if (text[i] === text[i + 1]) {
+        outputText += text[i] + randomLet() + text[i]
+        i++
+      } else {
+        outputText += text[i] + (Math.random() <= 0.6 ? randomLet() : '')
+      }
+    }
     setDecryptText(outputText)
   }
 
