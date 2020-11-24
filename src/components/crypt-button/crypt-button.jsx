@@ -31,10 +31,10 @@ const CryptButton = (props) => {
 
     for (let i = 0; i < text.length; i++) {
       if (text[i] === text[i + 1]) {
-        outputText += text[i] + randomLet() + text[i]
+        outputText += text[i] + (Math.random() <= 0.55 ? randomLet() : '') + text[i]
         i++
       } else {
-        outputText += text[i] + (Math.random() <= 0.6 ? randomLet() : '')
+        outputText += text[i]
       }
     }
     setDecryptText(outputText)
